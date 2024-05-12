@@ -1,0 +1,220 @@
+* ,
+::after,
+::before
+{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+/* VARIABLE */
+:root{
+    --color-pimary:#880dda;
+    --color-pimary-light: #ff7a50;
+    --color-secoudrayr-light:#fff6f2ce;
+    --color-secoundary-dark:#ffa589;
+    --color-white:#e7e5e5b6;
+    --color-heading:#dfdfdf;
+    --color-body:#333;
+    --color-white:#fff;
+    --border-radius:8px;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    color: var(--color-body);
+    font-size: 1.4rem;
+    font-weight: 400;
+    font-family: IranYekan;
+    background-color: var(--color-white);
+}
+h1,
+h2,
+h3{
+    font-weight: 700;
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2.2rem;
+}
+@media screen and (min-width: 1024px ) {
+    body{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 3.5rem;
+    }
+}
+
+
+
+.header{
+  background-color: var(--color-heading);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  position: sticky;
+  z-index: 99;
+  top: 0;
+}
+.container{
+  padding: 8rem 15rem;
+}
+.prodoct{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 4rem;
+  row-gap: 8rem;
+}
+.fa{
+  color: var(--color-pimary);
+}
+.header__name{
+  font-weight: 900;
+}
+.card{
+  background-color: var(--color-secoudrayr-light);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+
+}
+.card__img{
+  width: 100%;
+  height: 100%;
+}
+.card__title{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.title{
+  text-align: center;
+}
+.add{
+  background-color: var(--color-heading);
+  border: 0;
+  color: var(--color-pimary);
+  font-family: IranYekan;
+  font-size: 1.8rem;
+  font-weight: 900;
+  width: inherit;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  text-wrap: nowrap;
+  width: initial;
+}
+.card__title__price{
+  color: var(--color-pimary);
+  opacity: 80%;
+}
+.numberProdoct{
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.76);
+  top: -1rem;
+  left: 2rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  color: white;
+  font-size: 1.5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.fa-star{
+  position: relative;
+}
+
+/* backdrop */
+.backdrop {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px);
+    z-index: 10;
+  }
+  
+  .modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    padding: 2rem;
+    width: calc(100vw - 4rem);
+    max-width: 50rem;
+    z-index: 2;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    border-radius: var(--border-radius);
+  }
+  .modal__items{
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.25fr 0.25fr;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    column-gap: 2rem;
+  }
+  .titleHotelName{
+    text-wrap: nowrap;
+    font-weight: 900;
+  }
+  .title__price{
+    opacity: 90%;
+    font-size: 1.2rem;
+  }
+  .fa-arrow-down{
+    color: red;
+  }
+  .fa-trash{
+    color: black;
+  }
+  .clear{
+    border: 1px solid var(--color-pimary);
+    background-color: var(--color-white);
+  }
+  .arrow{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .modal__header{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  .hidden {
+    display: none;
+  }
+  
+  .modal__item__img{
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
+  .submit{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 8rem;
+  }
